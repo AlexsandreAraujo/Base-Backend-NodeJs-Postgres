@@ -1,15 +1,15 @@
 import { DataSource } from 'typeorm';
-// import Appointment from '../models/Appointment';
+import HelloWorld from '../models/HelloWorld';
 
 const AppDataSource = new DataSource({
     type: 'postgres',
     host: 'localhost',
     username: 'postgres',
-    password: 'alexla@1',
+    password: 'postgres',
     port: 5432,
-    database: 'gostack_gobarber',
-    // migrations: ['./src/database/migrations/**/*{.ts,.js}'],
-    // entities: [Appointment, User],
+    database: 'postgres',
+    migrations: ['./src/database/migrations/**/*{.ts,.js}'],
+    entities: [HelloWorld],
 });
 
 export default AppDataSource;
